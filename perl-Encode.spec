@@ -22,7 +22,7 @@ The Encode module provides the interfaces between Perl's strings and
 the rest of the system.
 
 %description -l pl
-Modu³ Encode udostêpnia interfejs pomiêdzy stringami w wewnêtrznym
+Modu³ Encode udostêpnia interfejs pomiêdzy ³añcuchami w wewnêtrznym
 formacie Perla a reszt± systemu.
 
 %prep
@@ -50,8 +50,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS Changes README
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorarch}/*.pm
-%{perl_vendorarch}/Encode/
-%dir %{perl_vendorarch}/auto/Encode/
+%{perl_vendorarch}/Encode
+%dir %{perl_vendorarch}/auto/Encode
 %dir %{perl_vendorarch}/auto/Encode/*/
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*.so
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so

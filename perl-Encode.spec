@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Encode
 Summary:	Encode - character encodings
-Summary(pl):	Encode - kodowania znaków
+Summary(pl.UTF-8):   Encode - kodowania znakÃ³w
 Name:		perl-Encode
 Version:	2.18
 Release:	0.1
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The Encode module provides the interfaces between Perl's strings and
 the rest of the system.
 
-%description -l pl
-Modu³ Encode udostêpnia interfejs pomiêdzy ³añcuchami w wewnêtrznym
-formacie Perla a reszt± systemu.
+%description -l pl.UTF-8
+ModuÅ‚ Encode udostÄ™pnia interfejs pomiÄ™dzy Å‚aÅ„cuchami w wewnÄ™trznym
+formacie Perla a resztÄ… systemu.
 
 %prep
 %setup -q -n %{pdir}-%{version}

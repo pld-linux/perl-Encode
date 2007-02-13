@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Encode
 Summary:	Encode - character encodings
-Summary(pl.UTF-8):   Encode - kodowania znaków
+Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
 Version:	2.18
 Release:	0.1

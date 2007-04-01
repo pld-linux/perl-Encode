@@ -9,10 +9,12 @@ Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
 Version:	2.18
 Release:	0.1
-License:	unknown (same as perl?)
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
 # Source0-md5:	b16ee372b5289303c1863c0371e4d3d9
+URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -55,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Encode/*/
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*.so
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.bs
+%{perl_vendorarch}/auto/Encode/*/*.bs
 #%{_mandir}/man?/*

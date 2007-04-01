@@ -51,11 +51,21 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS Changes README
 %attr(755,root,root) %{_bindir}/*
-%{perl_vendorarch}/*.pm
+%{perl_vendorarch}/Encode.pm
+%{perl_vendorarch}/encoding.pm
 %{perl_vendorarch}/Encode
 %dir %{perl_vendorarch}/auto/Encode
-%dir %{perl_vendorarch}/auto/Encode/*/
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/*.so
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Encode.so
+%{perl_vendorarch}/auto/Encode/Encode.bs
+%dir %{perl_vendorarch}/auto/Encode/Byte
+%dir %{perl_vendorarch}/auto/Encode/CN
+%dir %{perl_vendorarch}/auto/Encode/EBCDIC
+%dir %{perl_vendorarch}/auto/Encode/JP
+%dir %{perl_vendorarch}/auto/Encode/KR
+%dir %{perl_vendorarch}/auto/Encode/Symbol
+%dir %{perl_vendorarch}/auto/Encode/TW
+%dir %{perl_vendorarch}/auto/Encode/Unicode
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
 %{perl_vendorarch}/auto/Encode/*/*.bs
+# man pages not built as they overlap with perl-modules
 #%{_mandir}/man?/*

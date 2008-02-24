@@ -8,7 +8,7 @@ Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
 Version:	2.18
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl

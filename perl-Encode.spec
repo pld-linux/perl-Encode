@@ -7,13 +7,13 @@
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
-Version:	2.18
+Version:	2.23
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
-# Source0-md5:	b16ee372b5289303c1863c0371e4d3d9
+# Source0-md5:	0b96a73d0bf7586946b651a0e30cfe17
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -45,6 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# man pages overlap with perl-modules
+rm -rf $RPM_BUILD_ROOT%{_mandir}/man[13]
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -68,5 +71,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Encode/Unicode
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
 %{perl_vendorarch}/auto/Encode/*/*.bs
-# man pages not built as they overlap with perl-modules
-#%{_mandir}/man?/*

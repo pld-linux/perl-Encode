@@ -45,9 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# man pages overlap with perl-modules
-rm -rf $RPM_BUILD_ROOT%{_mandir}/man[13]
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -57,17 +54,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{perl_vendorarch}/Encode.pm
 %{perl_vendorarch}/encoding.pm
+# FIXME: *.h to devel(?), check out the use for *.e2x files
 %{perl_vendorarch}/Encode
 %dir %{perl_vendorarch}/auto/Encode
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Encode.so
-%{perl_vendorarch}/auto/Encode/Encode.bs
-%dir %{perl_vendorarch}/auto/Encode/Byte
-%dir %{perl_vendorarch}/auto/Encode/CN
-%dir %{perl_vendorarch}/auto/Encode/EBCDIC
-%dir %{perl_vendorarch}/auto/Encode/JP
-%dir %{perl_vendorarch}/auto/Encode/KR
-%dir %{perl_vendorarch}/auto/Encode/Symbol
-%dir %{perl_vendorarch}/auto/Encode/TW
-%dir %{perl_vendorarch}/auto/Encode/Unicode
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
+%dir %{perl_vendorarch}/auto/Encode/*/
 %{perl_vendorarch}/auto/Encode/*/*.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
+%{_mandir}/man1/enc2xs.*
+%{_mandir}/man1/piconv.*
+%{_mandir}/man3/Encode*
+%{_mandir}/man3/encoding.*

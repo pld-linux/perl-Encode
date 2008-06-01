@@ -9,7 +9,7 @@ Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
 Version:	2.24
 Release:	1
-# same as perl
+# same as in perl.spec package
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl

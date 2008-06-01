@@ -10,6 +10,7 @@ Name:		perl-Encode
 Version:	2.24
 Release:	1
 # same as perl
+Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz

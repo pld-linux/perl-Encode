@@ -18,6 +18,7 @@ Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Obsoletes:	perl-Encode-compat
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

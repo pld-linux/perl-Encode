@@ -52,7 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS Changes README
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/enc2xs
+%attr(755,root,root) %{_bindir}/piconv
 %{perl_vendorarch}/Encode.pm
 %{perl_vendorarch}/encoding.pm
 # FIXME: *.h to devel(?), check out the use for *.e2x files
@@ -61,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Encode/*/
 %{perl_vendorarch}/auto/Encode/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
-%{_mandir}/man1/enc2xs.*
-%{_mandir}/man1/piconv.*
-%{_mandir}/man3/Encode*
-%{_mandir}/man3/encoding.*
+%{_mandir}/man1/enc2xs.1*
+%{_mandir}/man1/piconv.1*
+%{_mandir}/man3/Encode*.3pm*
+%{_mandir}/man3/encoding.3pm*

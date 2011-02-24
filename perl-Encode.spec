@@ -12,7 +12,7 @@ Release:	1
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DANKOGAI/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Encode/DANKOGAI/%{pdir}-%{version}.tar.gz
 # Source0-md5:	2a04aaf1bcb851aef2454cfbf6f53bbe
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0

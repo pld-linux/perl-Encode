@@ -8,7 +8,7 @@ Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
 Version:	2.44
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -46,6 +46,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Encode
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -62,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Encode/*/
 %{perl_vendorarch}/auto/Encode/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
+%dir %{perl_vendorlib}/Encode
 %{_mandir}/man1/enc2xs.1*
 %{_mandir}/man1/piconv.1*
 %{_mandir}/man3/Encode*.3pm*

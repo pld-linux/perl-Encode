@@ -62,7 +62,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Encode
 %dir %{perl_vendorarch}/auto/Encode
 %dir %{perl_vendorarch}/auto/Encode/*/
-%{perl_vendorarch}/auto/Encode/*/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
 %dir %{perl_vendorlib}/Encode
 %{_mandir}/man1/enc2xs.1*

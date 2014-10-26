@@ -7,13 +7,13 @@
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
-Version:	2.62
+Version:	2.63
 Release:	1
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/DANKOGAI/%{pdir}-%{version}.tar.gz
-# Source0-md5:	566e9a270470135f90df5fb3804a67a1
+# Source0-md5:	6718af98563e5ff74d94cbf79e0ed54a
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13

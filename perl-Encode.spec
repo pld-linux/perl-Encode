@@ -7,13 +7,13 @@
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
-Version:	2.63
-Release:	2
+Version:	2.70
+Release:	1
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/DANKOGAI/%{pdir}-%{version}.tar.gz
-# Source0-md5:	6718af98563e5ff74d94cbf79e0ed54a
+# Source0-md5:	91af5a434c48ccdc8ceebc9dfd75fe1c
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -55,6 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS Changes README
 %attr(755,root,root) %{_bindir}/enc2xs
+%attr(755,root,root) %{_bindir}/encguess
 %attr(755,root,root) %{_bindir}/piconv
 %{perl_vendorarch}/Encode.pm
 %{perl_vendorarch}/encoding.pm
@@ -65,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
 %dir %{perl_vendorlib}/Encode
 %{_mandir}/man1/enc2xs.1*
+%{_mandir}/man1/encguess.1*
 %{_mandir}/man1/piconv.1*
 %{_mandir}/man3/Encode*.3pm*
 %{_mandir}/man3/encoding.3pm*

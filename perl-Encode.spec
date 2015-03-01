@@ -16,7 +16,9 @@ Source0:	http://www.cpan.org/modules/by-module/Encode/DANKOGAI/%{pdir}-%{version
 # Source0-md5:	91af5a434c48ccdc8ceebc9dfd75fe1c
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
+%{?with_tests:BuildRequires:	perl-parent >= 0.221}
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-parent >= 0.221
 Obsoletes:	perl-Encode-compat
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

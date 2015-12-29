@@ -7,13 +7,13 @@
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
-Version:	2.73
-Release:	2
+Version:	2.78
+Release:	1
 Epoch:		2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Encode/DANKOGAI/%{pdir}-%{version}.tar.gz
-# Source0-md5:	644b5aaf7c4d0c6dc6d3d189845b24c3
+Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
+# Source0-md5:	22706544f1744e60b578cad03eb34bbd
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
 %{?with_tests:BuildRequires:	perl-parent >= 0.221}
@@ -64,8 +64,23 @@ rm -rf $RPM_BUILD_ROOT
 # FIXME: *.h to devel(?), check out the use for *.e2x files
 %{perl_vendorarch}/Encode
 %dir %{perl_vendorarch}/auto/Encode
-%dir %{perl_vendorarch}/auto/Encode/*/
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/*/*.so
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Encode.so
+%dir %{perl_vendorarch}/auto/Encode/Byte
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Byte/Byte.so
+%dir %{perl_vendorarch}/auto/Encode/CN
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/CN/CN.so
+%dir %{perl_vendorarch}/auto/Encode/EBCDIC
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/EBCDIC/EBCDIC.so
+%dir %{perl_vendorarch}/auto/Encode/JP
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/JP/JP.so
+%dir %{perl_vendorarch}/auto/Encode/KR
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/KR/KR.so
+%dir %{perl_vendorarch}/auto/Encode/Symbol
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Symbol/Symbol.so
+%dir %{perl_vendorarch}/auto/Encode/TW
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/TW/TW.so
+%dir %{perl_vendorarch}/auto/Encode/Unicode
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Unicode/Unicode.so
 %dir %{perl_vendorlib}/Encode
 %{_mandir}/man1/enc2xs.1*
 %{_mandir}/man1/encguess.1*

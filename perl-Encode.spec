@@ -7,17 +7,21 @@
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
-Version:	2.78
+Version:	2.91
 Release:	1
 Epoch:		2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
-# Source0-md5:	22706544f1744e60b578cad03eb34bbd
+# Source0-md5:	e4421c1fbd1908f8a0986f4dfc71a63e
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
-%{?with_tests:BuildRequires:	perl-parent >= 0.221}
 BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl(Exporter) >= 5.57
+BuildRequires:	perl-Test-Simple >= 0.81_01
+BuildRequires:	perl-parent >= 0.221
+%endif
 Requires:	perl-parent >= 0.221
 Obsoletes:	perl-Encode-compat
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

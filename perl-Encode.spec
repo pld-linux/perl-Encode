@@ -7,13 +7,13 @@
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
-Version:	2.91
+Version:	2.92
 Release:	1
 Epoch:		2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
-# Source0-md5:	e4421c1fbd1908f8a0986f4dfc71a63e
+# Source0-md5:	d14a5a4ae92fc9b78f20e6027453ccb7
 URL:		http://search.cpan.org/dist/Encode/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Encode
 
+# rename to avoid conflict with perl-tools
+mv $RPM_BUILD_ROOT%{_bindir}/encguess{,-tool}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -61,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS Changes README
 %attr(755,root,root) %{_bindir}/enc2xs
-%attr(755,root,root) %{_bindir}/encguess
+%attr(755,root,root) %{_bindir}/encguess-tool
 %attr(755,root,root) %{_bindir}/piconv
 %{perl_vendorarch}/Encode.pm
 %{perl_vendorarch}/encoding.pm

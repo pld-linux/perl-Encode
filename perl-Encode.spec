@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Encode
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków

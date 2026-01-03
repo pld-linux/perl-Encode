@@ -6,13 +6,13 @@
 Summary:	Encode - character encodings
 Summary(pl.UTF-8):	Encode - kodowania znaków
 Name:		perl-Encode
-Version:	3.17
+Version:	3.21
 Release:	1
 Epoch:		2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
-# Source0-md5:	c55a11554641517ae7b04bf2ec53b271
+Source0:	https://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
+# Source0-md5:	824c6d75f28fed326c31c595f3f81dbd
 URL:		https://metacpan.org/release/Encode
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13

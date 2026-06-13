@@ -11,7 +11,7 @@ Release:	1
 Epoch:		2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/Encode/%{pdir}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/Encode/DANKOGAI/%{pdir}-%{version}.tar.gz
 # Source0-md5:	2f6ec6217f166b1aefac05d59f9f581a
 URL:		https://metacpan.org/release/Encode
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -19,7 +19,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl(Exporter) >= 5.57
-BuildRequires:	perl-Test-Simple >= 0.81_01
+BuildRequires:	perl-Test-Simple >= 0.92
 BuildRequires:	perl-parent >= 0.221
 %endif
 Requires:	perl-parent >= 0.221
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Encode
 
 # rename to avoid conflict with perl-tools
-mv $RPM_BUILD_ROOT%{_bindir}/encguess{,-tool}
+%{__mv} $RPM_BUILD_ROOT%{_bindir}/encguess{,-tool}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,23 +71,23 @@ rm -rf $RPM_BUILD_ROOT
 # FIXME: *.h to devel(?), check out the use for *.e2x files
 %{perl_vendorarch}/Encode
 %dir %{perl_vendorarch}/auto/Encode
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Encode.so
+%{perl_vendorarch}/auto/Encode/Encode.so
 %dir %{perl_vendorarch}/auto/Encode/Byte
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Byte/Byte.so
+%{perl_vendorarch}/auto/Encode/Byte/Byte.so
 %dir %{perl_vendorarch}/auto/Encode/CN
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/CN/CN.so
+%{perl_vendorarch}/auto/Encode/CN/CN.so
 %dir %{perl_vendorarch}/auto/Encode/EBCDIC
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/EBCDIC/EBCDIC.so
+%{perl_vendorarch}/auto/Encode/EBCDIC/EBCDIC.so
 %dir %{perl_vendorarch}/auto/Encode/JP
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/JP/JP.so
+%{perl_vendorarch}/auto/Encode/JP/JP.so
 %dir %{perl_vendorarch}/auto/Encode/KR
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/KR/KR.so
+%{perl_vendorarch}/auto/Encode/KR/KR.so
 %dir %{perl_vendorarch}/auto/Encode/Symbol
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Symbol/Symbol.so
+%{perl_vendorarch}/auto/Encode/Symbol/Symbol.so
 %dir %{perl_vendorarch}/auto/Encode/TW
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/TW/TW.so
+%{perl_vendorarch}/auto/Encode/TW/TW.so
 %dir %{perl_vendorarch}/auto/Encode/Unicode
-%attr(755,root,root) %{perl_vendorarch}/auto/Encode/Unicode/Unicode.so
+%{perl_vendorarch}/auto/Encode/Unicode/Unicode.so
 %dir %{perl_vendorlib}/Encode
 %{_mandir}/man1/enc2xs.1*
 %{_mandir}/man1/encguess.1*
